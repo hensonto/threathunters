@@ -1,9 +1,12 @@
 # BazarLoader
 
-Use this query to look for Backdoor BazarLoader loading dll as JPG file in the environment
+Use this query to look for Backdoor BazarLoader in the environment
 
-## Query
+## EDR CDM [Cloud Console queries]
+
+## Loading dll as JPG file using regsvr32.exe
+
 ```
-type_id:8001 and operation:1 and event_actor.file.name:mshta.exe and process.file.name:regsvr32.exe and process.cmd_line:""C:\Windows\System32\regsvr32.exe"* c:\users\public\varForFor.jpg"
+Event Type Id:8001-Process Activity AND Disposition:1 AND Actor File Name:mshta.exe AND Process Name:regsvr32.exe AND Process Command Line Token:varForFor.jpg
 
 ```

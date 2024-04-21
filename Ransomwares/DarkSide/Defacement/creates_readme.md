@@ -2,8 +2,9 @@
 
 Use this query to look for running DarkSide ransomware behavior in the environment
 
-## Query
-```
-type_id:8003 and operation:1 and file.normalized_path:*\readme.ef33442f.txt
+## EDR CDM [Cloud Console queries]
 
+###  Look for ransomware encryption with ransom note
+```
+Event Type Id:8003-File Activity AND Disposition:1 AND File Name:readme.ef33442f.txt
 ```
